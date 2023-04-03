@@ -22,7 +22,7 @@
   <body>
     <div class="bg list_bg">
       <div class="mw">
-        <h1 class="logo"><a href="#">Fav-list</a></h1>
+        <h1 class="logo"><a href="/">Fav-list</a></h1>
         <div class="btn_add">
           <a href="/write"><i class="fa-regular fa-pen-to-square"></i></a>
         </div>
@@ -30,9 +30,9 @@
           <ul class="shelf">
             <% for (list in post){ %>
             <li class="album">
-              <div class="star"><%= post[list].star %></div>
+              <div class="star"><%= post[list].docuStar %></div>
               <div class="img_con">
-                <img src="<%= post[list].coverUrl %>" alt="albumCover" />
+                <img src="<%= post[list].docuCover %>" alt="albumCover" />
               </div>
               <a href="/detail/<%= post[list]._id %>"></a>
             </li>
@@ -42,5 +42,26 @@
         <button class="btn more">더보기</button>
       </div>
     </div>
+
+    <script>
+      const postlist = document.querySelectorAll(".album");
+      const more = document.querySelector(".more");
+
+      let num = 6;
+      postlist.forEach((item, i) => {
+        if (i < num) {
+          item.classList.add("on");
+        }
+      });
+
+      more.addEventListener("click", () => {
+        num += 3;
+        postlist.forEach((item, i) => {
+          if (i < num) {
+            item.classList.add("on");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
