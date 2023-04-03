@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/my_reset.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <div class="bg edit_bg">
+      <div class="mw">
+        <h1 class="logo"><a href="#">Fav-list</a></h1>
+        <h2>리스트 수정</h2>
+        <div class="imgbox">
+          <img src="/public/image/vinyl.png" alt="vinyl">
+        </div>
+
+        <form action="/edit?_method=PUT" method="post">
+          <ul class="write_con">
+            <li>
+              <p><label>타이틀 : <input type="text" name="title"></label></p>
+              <p><label>아티스트 : <input type="text" name="artist"></label></p>
+              <p><label>별점 : <select name="star" id="star">
+                <option value="list1">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                <option value="list2">&#9733;&#9733;&#9733;&#9733;</option>
+                <option value="list3">&#9733;&#9733;&#9733;</option>
+                <option value="list4">&#9733;&#9733;</option>
+                <option value="list5">&#9733;</option>
+              </select></p>
+              <p><label>한줄평 : <input type="text" name="comment"></label></p>
+              <p><label>앨범아트 : <input type="text" name="cover" placeholder="(URL)"></label></p>
+            </li>
+          </ul>
+          <div class="write_btn_con">
+            <input class="btn" type="button" value="이전">
+            <input class="btn" type="submit" value="수정">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

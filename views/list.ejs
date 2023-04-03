@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/my_reset.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <div class="bg list_bg">
+      <div class="mw">
+        <h1 class="logo"><a href="#">Fav-list</a></h1>
+        <div class="btn_add">
+          <a href="/write"><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <section class="sec">
+          <ul class="shelf">
+            <% for (list in post){ %>
+            <li class="album">
+              <div class="star"><%= post[list].star %></div>
+              <div class="img_con">
+                <img src="<%= post[list].coverUrl %>" alt="albumCover" />
+              </div>
+              <a href="/detail/<%= post[list]._id %>"></a>
+            </li>
+            <% } %>
+          </ul>
+        </section>
+        <button class="btn more">더보기</button>
+      </div>
+    </div>
+  </body>
+</html>

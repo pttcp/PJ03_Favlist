@@ -1,0 +1,24 @@
+{
+  "name": "pj03_favlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pttcp/PROJECT03_Favlist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pttcp/PROJECT03_Favlist/issues"
+  },
+  "homepage": "https://github.com/pttcp/PROJECT03_Favlist#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0"
+  }
+}
